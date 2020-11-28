@@ -12,11 +12,6 @@ import csv
 # Path to collect data from resources folder
 pybank_csv = os.path.join('Resources', 'budget_data.csv')
 
-# Specify how to open and read the csv file (could go at the end)
-with open(pybank_csv) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')
-    next(csvreader)
-
 
 # Define the function and have it accept the 'bank_data' as  its sole parameter
 def PyBank(bank_data):
@@ -62,4 +57,15 @@ def PyBank(bank_data):
     print(f"Greatest Decrease in Profits: " + '${:.2f}'.format(min_change))
 
 
+# Specify how to open and read the csv file (could go at the end)
+with open(pybank_csv, 'r') as csvfile:
+
+    #  Split the data on commas
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    next(csvreader)
+
+    #Loop through the data with function call
+    for row in csvreader:
+        PyBank(row)
 
