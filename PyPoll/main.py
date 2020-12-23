@@ -78,3 +78,20 @@ with open(pypoll_csv) as csvfile:
     print(f"Winner: {winner.get(max(winner))}")
     print("--------------------------------------------")
     
+    
+    # Print Analysis to Text File
+    analysis = os.path.join('Analysis', 'Analysis.txt')
+    
+    f = open(analysis, "a")
+    print("Election Results", file=f)
+    print("--------------------------------------------", file=f)
+    print(f"Total Votes: " + str(voters), file=f)
+    print("--------------------------------------------", file=f)
+    print(f"{uniques[0]}: {per_w}% ({str(w)})", file=f)
+    print(f"{uniques[1]}: {per_x}% ({str(x)})", file=f)
+    print(f"{uniques[2]}: {per_y}% ({str(y)})", file=f)
+    print(f"{uniques[3]}: {per_z}% ({str(z)})", file=f)
+    print("--------------------------------------------", file=f)
+    print(f"Winner: {winner.get(max(winner))}", file=f)
+    print("--------------------------------------------", file=f)
+    f.close()
