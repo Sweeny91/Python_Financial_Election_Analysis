@@ -83,4 +83,4 @@ Both of these challenges encompass a real-world situation where your newfound Py
 # Deliverables:
 
 * The final scripts to be ran for the analysis of this project can be found in the main_corrections.py and main.py for the PyBank and PyPoll tasks, respectively.
-* A brief Analysis for each task can similarly be found in the 'Analysis' folders in their respective directories.
+* A brief Analysis for each task can similarly be found in the 'Analysis' folders of their respective directories.
